@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Budbax Cybersecurity</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Budbax Cybersecurity - Forge of Untamed Intellects. Student-founded cybersecurity startup delivering strong, practical security solutions." />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #05060a;
+      color: #e5e5e5;
+      line-height: 1.6;
+    }
+    a { color: #35b6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: #05060a;
+      border-bottom: 1px solid #222;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .logo-area img {
+      height: 52px;
+      width: auto;
+    }
+    .logo-text {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .btn-primary {
+      background: #35b6ff;
+      color: #05060a;
+      padding: 0.6rem 1.4rem;
+      border-radius: 999px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .btn-primary:hover { background: #1f8acc; }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 1rem 3rem 1rem;
+    }
+
+    /* Hero */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+      padding: 2.5rem 0;
+    }
+    .hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+    .hero h1 span {
+      color: #35b6ff;
+    }
+    .hero p {
+      margin-bottom: 1.4rem;
+      color: #c2c2c2;
+    }
+    .hero-sub {
+      font-size: 0.95rem;
+      color: #9e9e9e;
+    }
+    .hero-logo-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .hero-logo-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      background: radial-gradient(circle at top, #222, #05060a);
+      padding: 0.75rem;
+    }
+
+    /* Sections */
+    section { padding: 2rem 0; }
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.8rem;
+    }
+    section p { color: #c2c2c2; margin-bottom: 1rem; }
+
+    /* Founders */
+    .founder-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.3rem;
+      margin-top: 1rem;
+    }
+    .card {
+      border: 1px solid #222;
+      padding: 1.1rem;
+      border-radius: 10px;
+      background: #0b0d13;
+    }
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+    .badge {
+      display: inline-block;
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid #35b6ff;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.4rem;
+    }
+
+    /* Services */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.3rem;
+      margin-top: 1rem;
+    }
+    .service-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .service-list {
+      list-style: disc;
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+      color: #cfd5ff;
+    }
+
+    /* Contact */
+    .contact-box {
+      border-radius: 10px;
+      border: 1px solid #222;
+      padding: 1.3rem;
+      background: #080a10;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.4rem;
+      align-items: center;
+    }
+    .contact-box p { margin-bottom: 0.6rem; }
+    .contact-grid {
+      font-size: 0.92rem;
+    }
+    .contact-grid div { margin-bottom: 0.4rem; }
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #888;
+      background: #05060a;
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; }
+      .contact-box { grid-template-columns: 1fr; }
+      nav ul { display: none; } /* keep it simple for now */
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-area">
+        <img src="Budbaks-logo.jpeg" alt="Budbax Cybersecurity logo" />
+        <div class="logo-text">Budbax</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#founders">Founders</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'});">
+        Get in touch
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <h1>Backbench brains, frontline defence. <span></span></h1>
+        <p>
+          Budbax is a student‑founded cybersecurity organisation turning late‑night labs into real‑world protection for startups, colleges and growing businesses.
+        </p>
+        <p class="hero-sub">
+          Built by Shantanu Rajeshirke, Shreyash Shighwan and Jayesh Gupta – three engineers obsessed with breaking, understanding and securing systems.
+        </p>
+        <button class="btn-primary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'});">
+          Explore services
+        </button>
+      </div>
+      <div class="hero-logo-wrapper">
+        <img src="Budbaks-logo.jpeg" alt="Budbax Cybersecurity emblem" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <h2>About Budbax</h2>
+      <p>
+        Budbax is a young cybersecurity startup forged by hard‑working students who believe strong defence should be accessible, transparent and technically rigorous.
+      </p>
+      <p>
+        From capture‑the‑flag labs to production networks, the team applies research‑grade thinking to practical security problems without the enterprise‑grade price tag.
+      </p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+      <h2>What we do</h2>
+      <p>
+        The focus is on building reliable security foundations for organisations that are still growing but already serious about protecting data, reputation and users.
+      </p>
+
+      <div class="service-grid">
+        <div class="card">
+          <div class="service-title">Security hardening & vulnerability management</div>
+          <ul class="service-list">
+            <li>System and network security hardening for Linux, Windows and cloud environments</li>
+            <li>Baseline configurations for firewalls, routers, servers and endpoints.</li>
+            <li>Ongoing vulnerability management with clear remediation steps.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="service-title">Offensive security mindset</div>
+          <ul class="service-list">
+            <li>Student‑style red‑team simulations with clear reporting.</li>
+            <li>Attack path mapping from initial foothold to impact.</li>
+            <li>Hands‑on sessions to train in‑house teams.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="service-title">Security for students & startups</div>
+          <ul class="service-list">
+            <li>Secure‑by‑design guidance for new products and projects.</li>
+            <li>Low‑budget security baselines for early‑stage companies.</li>
+            <li>Workshops for colleges, clubs and tech communities.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founders -->
+    <section id="founders">
+      <h2>Founding team</h2>
+      <p>
+        Budbax is led by three cybersecurity students who combine academic research, practical labs and real‑world problem solving.
+      </p>
+
+      <div class="founder-grid">
+        <div class="card">
+          <h3>Shantanu Rajeshirke</h3>
+          <p>Focus on network defence, incident response and security automation.</p>
+          <span class="badge">Co‑founder</span>
+        </div>
+        <div class="card">
+          <h3>Shreyash Shighwan</h3>
+          <p>Works on penetration testing, exploit research and secure architectures.</p>
+          <span class="badge">Co‑founder</span>
+        </div>
+        <div class="card">
+          <h3>Jayesh Gupta</h3>
+          <p>Specialises in application security, secure coding and threat modeling.</p>
+          <span class="badge">Co‑founder</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact & collaboration</h2>
+      <p>
+        Looking for a student team that treats your infrastructure like a live lab and your data like its own? Reach out and start a conversation.
+      </p>
+
+      <div class="contact-box">
+        <div>
+          <p><strong>Typical projects</strong></p>
+          <p>
+            Small business security reviews, college or community workshops, and hands‑on security guidance for early‑stage products and internal tools.
+          </p>
+        </div>
+        <div class="contact-grid">
+          <div><strong>Email:</strong> budbax20@gmail.com</div>
+          <div><strong>Location:</strong> Mumbai, India</div>
+          <div><strong>LinkedIn / GitHub:</strong> Add your profiles here.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> Budbax Cybersecurity · Forge of Untamed Intellects.
+  </footer>
+
+  <script>
+    // Set current year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
